@@ -70,7 +70,7 @@ void MostraDadosVetor()
 
 
 //Struct global por COPIA e Não Referencia para o Coletor para a função(Modo Horrivel)
-extern Player player1;; //Extern vai referenciar com a Declaração da Struct pelo Arquivo ColetaDados onde ela é Inicializada com Valor
+extern Player player1; //Extern vai referenciar com a Declaração da Struct pelo Arquivo ColetaDados onde ela é Inicializada com Valor
 
 void MostraDados(Player jogador) //Passa o tipo jogador mas não é usado é só para sobrecarga da função
 {
@@ -92,7 +92,7 @@ void MostraDados(Player jogador) //Passa o tipo jogador mas não é usado é só
 
 
 
-void MostraDadosReferencia(Player &jogador) //Passa o tipo jogador mas não é usado é só para sobrecarga da função
+void MostraDadosReferencia(Player &jogador) //Passa o tipo jogador por referencia para não haver Copia (Duplicada de Dados na Memoria)
 {
 	cout << endl << endl;
 	cout << "[Nome Completo]  |" << '\t';
@@ -142,4 +142,61 @@ void MostraDadosVetorStruct()
 	}
 
 	cout << endl;
+}
+
+
+
+
+void MostraDadosVetorStruct(Player * players_ref) //Passa o tipo players por referencia para não haver Copia (Duplicada de Dados na Memoria)
+{
+	cout << endl << endl;
+	cout << "[Nome Completo]  |" << '\t';
+	cout << "[Login]  |" << '\t';
+	cout << "[Senha]  |" << '\t';
+	cout << "[Idade]  |" << '\t';
+	cout << "[Sexo]  |" << '\t';
+	cout << "[Estado]" << endl;
+
+	int indice = 0;
+	while (indice < MAX_PLAYERS) //Usei o While porque para quem só usa for é igual só Saber usar o martelo, todo problema pra ele vai achar que é prego
+	{
+		if (strcmp(players_ref[indice].s_colectName, "0") == 0) //para de Imprimir quando encontra o Digito 0
+		{
+			cout << endl;
+			break;
+		}
+		cout << players_ref[indice].s_colectName << " | " << '\t';
+		cout << players_ref[indice].s_colectLogin << " | " << '\t';
+		cout << players_ref[indice].s_colectSenha << " | " << '\t';
+		cout << players_ref[indice].s_colectIdade << " | " << '\t';
+		cout << players_ref[indice].s_colectSexo << " | " << '\t';
+		cout << players_ref[indice].s_colectEstado << endl;
+		indice++;
+	}
+
+	cout << endl;
+}
+
+
+
+
+//Struct global por Referencia para o Coletor para a função(Modo Bom não há duplicadas)
+extern PlayerObj player1Obj; //Extern vai referenciar com a Declaração da Struct pelo Arquivo ColetaDados onde ela é Inicializada com Valor
+
+void MostraDados(PlayerObj *jogador) //Passa o tipo jogador mas não é usado é só para sobrecarga da função, *jogador ponteiro recebe o endereço de memoria onde esta alocado o player1Obj como referencia
+{
+	cout << endl << endl;
+	cout << "[Nome Completo]  |" << '\t';
+	cout << "[Login]  |" << '\t';
+	cout << "[Senha]  |" << '\t';
+	cout << "[Idade]  |" << '\t';
+	cout << "[Sexo]  |" << '\t';
+	cout << "[Estado]" << endl;
+
+	cout << jogador->s_colectName << " | " << '\t';  //  -> a flechinha é o operador de acesso por referencia ao inves do "." ponto
+	cout << jogador->s_colectLogin << " | " << '\t';
+	cout << jogador->s_colectSenha << " | " << '\t';
+	cout << jogador->s_colectIdade << " | " << '\t';
+	cout << jogador->s_colectSexo << " | " << '\t';
+	cout << jogador->s_colectEstado << endl;
 }

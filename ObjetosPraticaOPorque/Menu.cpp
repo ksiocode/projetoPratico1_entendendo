@@ -69,8 +69,19 @@ void Menu()
 	}
 		break;
 	case e_opc_structvetor5jogadoresreferencia:
+	{
+		extern Player players[MAX_PLAYERS];
+		ColetaDadosVetorStruct(players);
+		MostraDadosVetorStruct(players);
+	}
 		break;
 	case e_opc_class1jogador:
+	{
+		extern PlayerObj player1Obj;
+		ColetaDados(&player1Obj); //Foi passado por Referencia o & passa o endereço de onde esta o Objeto na Memoria para o * Ponteiro da Função
+		MostraDados(&player1Obj);
+
+	}
 		break;
 	case e_opc_classvetor5jogadores:
 		break;

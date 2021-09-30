@@ -1,7 +1,8 @@
 #include "Header.h"
+#include "Player.h"
 
-//Variaveis globais para o Coletor para a função(Modo Horrivel)
-extern char colectName[64]; //Extern vai referenciar com a Declaração da Variavel pelo Arquivo ColetaDados onde ela é Inicializada com Valor
+//Variaveis globais para o Coletor para a funÃ§Ã£o(Modo Horrivel)
+extern char colectName[64]; //Extern vai referenciar com a DeclaraÃ§Ã£o da Variavel pelo Arquivo ColetaDados onde ela Ã© Inicializada com Valor
 extern string colectLogin;
 extern string colectSenha;
 extern int colectIdade;
@@ -29,8 +30,8 @@ void MostraDados()
 }
 
 
-//Vetor global para o Coletor para a função(Modo Horrivel)
-extern char colectNameVector[MAX_USERS_VEC][64]; //3 Usuarios com até 64 Digitos
+//Vetor global para o Coletor para a funÃ§Ã£o(Modo Horrivel)
+extern char colectNameVector[MAX_USERS_VEC][64]; //3 Usuarios com atÃ© 64 Digitos
 extern string colectLoginVector[MAX_USERS_VEC];
 extern string colectSenhaVector[MAX_USERS_VEC];
 extern int colectIdadeVector[MAX_USERS_VEC];
@@ -48,7 +49,7 @@ void MostraDadosVetor()
 	cout << "[Estado]" << endl;
 
 	int indice = 0;
-	while (indice < MAX_USERS_VEC) //Usei o While porque para quem só usa for é igual só Saber usar o martelo, todo problema pra ele vai achar que é prego
+	while (indice < MAX_USERS_VEC) //Usei o While porque para quem sÃ³ usa for Ã© igual sÃ³ Saber usar o martelo, todo problema pra ele vai achar que Ã© prego
 	{
 		if (strcmp(colectNameVector[indice], "0") == 0) //para de Imprimir quando encontra o Digito 0
 		{

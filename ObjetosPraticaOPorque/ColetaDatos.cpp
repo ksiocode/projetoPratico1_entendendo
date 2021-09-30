@@ -88,3 +88,22 @@ void ColetaDados(Player jogador)  //Passa o tipo jogador mas não é usado é s�
 	cout << "Digite o Estado UF: ";
 	cin >> player1.s_colectEstado;
 }
+
+
+Player player2;
+void ColetaDadosReferencia(Player &jogador)  //Alterando os Valores por Referencia
+{
+	cout << "Digite o Nome Completo do Usuario: ";
+	cin.ignore(); // Remove a Quebra de Linha do Buffer para o Getline
+	cin.getline(jogador.s_colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
+	cout << "Digite o Login do Usuario: ";
+	cin >> jogador.s_colectLogin;
+	cout << "Digite um Senha para o Usuario: ";
+	cin >> jogador.s_colectSenha;
+	cout << "Digite a Idade: ";
+	cin >> jogador.s_colectIdade;
+	cout << "Digite o Sexo \'M' ou \'F': ";
+	cin >> jogador.s_colectSexo;
+	cout << "Digite o Estado UF: ";
+	cin >> jogador.s_colectEstado;
+}

@@ -91,3 +91,23 @@ void MostraDados(Player jogador) //Passa o tipo jogador mas não é usado é só
 	cout << player1.s_colectSexo << " | " << '\t';
 	cout << player1.s_colectEstado << endl;
 }
+
+
+
+void MostraDadosReferencia(Player &jogador) //Passa o tipo jogador mas não é usado é só para sobrecarga da função
+{
+	cout << endl << endl;
+	cout << "[Nome Completo]  |" << '\t';
+	cout << "[Login]  |" << '\t';
+	cout << "[Senha]  |" << '\t';
+	cout << "[Idade]  |" << '\t';
+	cout << "[Sexo]  |" << '\t';
+	cout << "[Estado]" << endl;
+
+	cout << jogador.s_colectName << " | " << '\t';
+	cout << jogador.s_colectLogin << " | " << '\t';
+	cout << jogador.s_colectSenha << " | " << '\t';
+	cout << jogador.s_colectIdade << " | " << '\t';
+	cout << jogador.s_colectSexo << " | " << '\t';
+	cout << jogador.s_colectEstado << endl;
+}

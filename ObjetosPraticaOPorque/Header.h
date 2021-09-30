@@ -16,3 +16,7 @@ void MostraDadosVetor();
 
 void ColetaDados(Player jogador);
 void MostraDados(Player jogador);
+
+
+void ColetaDadosReferencia(Player &jogador);
+void MostraDadosReferencia(Player &jogador);

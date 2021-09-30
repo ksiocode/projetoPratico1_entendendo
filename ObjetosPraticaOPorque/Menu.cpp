@@ -8,6 +8,7 @@ void Menu()
 	cout << "1 - Ler 1 jogador por 1 Variavel e Mostrar" << endl;
 	cout << "2 - Ler 3 jogadores em um Vetor e Mostrar" << endl;
 	cout << "3 - Ler 1 jogador em um Struct com Variaveis e Mostrar" << endl;
+	cout << "33 - Ler 1 jogador em um Struct com Por Referencia e Mostrar" << endl;
 	cout << "4 - Ler 5 jogadores em um Vetor de Struct e Mostrar" << endl;
 	cout << "5 - Ler 1 jogador em um Objeto(class) com Variaveis e Mostrar" << endl;
 	cout << "6 - Ler 5 jogadores em um Vetor de Objeto(class) e Mostrar" << endl;
@@ -37,6 +38,12 @@ void Menu()
 		extern Player player1;
 		ColetaDados(player1);
 		MostraDados(player1);
+	}
+	case '33':
+	{
+		extern Player player2;
+		ColetaDadosReferencia(player2);
+		MostraDadosReferencia(player2);
 	}
 		break;
 	case '4':

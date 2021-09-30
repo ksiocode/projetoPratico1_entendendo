@@ -1,6 +1,7 @@
 #include "Header.h"
 
 
+
 void Menu()
 {
 	char op = '0';
@@ -19,7 +20,6 @@ void Menu()
 	clear_screen();
 
 	
-
 	switch (op)
 	{
 	case '0':

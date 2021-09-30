@@ -31,6 +31,7 @@ void Menu()
 		MostraDadosVetor();
 		break;
 	case '3':
+		ColetaDados(player1);
 		break;
 	case '4':
 		break;

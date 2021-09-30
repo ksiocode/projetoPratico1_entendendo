@@ -69,3 +69,33 @@ void ColetaDadosVetor()
 		cout << endl;
 
 }
+
+
+
+struct Player {
+	char colectName[64];
+	string colectLogin;
+	string colectSenha;
+	int colectIdade;
+	char colectSexo;
+	string colectEstado;
+};
+
+Player player1;
+
+void ColetaDados(Player jogador) //Agora com Sobrecarga do Tipo Struct Player, ou Tipo Player
+{
+	cout << "Digite o Nome Completo do Usuario: ";
+	cin.ignore(); // Remove a Quebra de Linha do Buffer para o Getline
+	cin.getline(jogador.colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
+	cout << "Digite o Login do Usuario: ";
+	cin >> jogador.colectLogin;
+	cout << "Digite um Senha para o Usuario: ";
+	cin >> jogador.colectSenha;
+	cout << "Digite a Idade: ";
+	cin >> jogador.colectIdade;
+	cout << "Digite o Sexo \'M' ou \'F': ";
+	cin >> jogador.colectSexo;
+	cout << "Digite o Estado UF: ";
+	cin >> jogador.colectEstado;
+}

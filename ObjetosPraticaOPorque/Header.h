@@ -11,3 +11,6 @@ void MostraDados();
 #define MAX_USERS_VEC 3
 void ColetaDadosVetor();
 void MostraDadosVetor();
+
+
+void ColetaDados(Player jogador);

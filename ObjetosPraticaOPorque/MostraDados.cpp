@@ -63,7 +63,6 @@ void MostraDadosVetor()
 		cout << colectEstadoVector[indice] << endl;
 		indice++;
 	}
-	
 	cout << endl;
 }
 
@@ -72,7 +71,6 @@ void MostraDadosVetor()
 
 //Struct global por COPIA e Não Referencia para o Coletor para a função(Modo Horrivel)
 extern Player player1;; //Extern vai referenciar com a Declaração da Struct pelo Arquivo ColetaDados onde ela é Inicializada com Valor
-
 
 void MostraDados(Player jogador) //Passa o tipo jogador mas não é usado é só para sobrecarga da função
 {

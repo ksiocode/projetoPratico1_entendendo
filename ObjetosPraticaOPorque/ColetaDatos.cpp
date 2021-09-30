@@ -75,6 +75,7 @@ Player player1;
 void ColetaDados(Player jogador)  //Passa o tipo jogador mas não é usado é só para sobrecarga da função
 {
 	cout << "Digite o Nome Completo do Usuario: ";
+	cin.ignore();
 	cin.ignore(); // Remove a Quebra de Linha do Buffer para o Getline
 	cin.getline(player1.s_colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
 	cout << "Digite o Login do Usuario: ";

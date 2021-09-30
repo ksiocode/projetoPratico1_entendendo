@@ -2,6 +2,13 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
+#include "LimpaTela.h"
+
+void cls(HANDLE hConsole);
+
+
+
+
 
 using namespace std;
 

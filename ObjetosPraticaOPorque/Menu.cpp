@@ -16,7 +16,7 @@ void Menu()
 	cout << endl << "Digite o Numero da Opcao escolhida" << endl;
 	cout << "Opcao: ";
 	cin >> op;
-	system("cls");
+	cls(hStdout);
 
 	
 

@@ -8,7 +8,7 @@
 
 
 /*
-*	Situação Problema 1:
+	Situação Problema 1:
 	Supomos que temos um jogo onde seria necessário cadastrar os jogadores para eles serem identificados
 	e armazenados também a tabela de pontuação dos mesmos, perfil do jogador.
 

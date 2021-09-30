@@ -72,35 +72,19 @@ void ColetaDadosVetor()
 
 Player player1;
 
-void ColetaDados(Player jogador) //Agora com Sobrecarga do Tipo Struct Player, ou Tipo Player
+void ColetaDados(Player jogador)  //Passa o tipo jogador mas não é usado é só para sobrecarga da função
 {
 	cout << "Digite o Nome Completo do Usuario: ";
 	cin.ignore(); // Remove a Quebra de Linha do Buffer para o Getline
-	cin.getline(jogador.s_colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
+	cin.getline(player1.s_colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
 	cout << "Digite o Login do Usuario: ";
-	cin >> jogador.s_colectLogin;
+	cin >> player1.s_colectLogin;
 	cout << "Digite um Senha para o Usuario: ";
-	cin >> jogador.s_colectSenha;
+	cin >> player1.s_colectSenha;
 	cout << "Digite a Idade: ";
-	cin >> jogador.s_colectIdade;
+	cin >> player1.s_colectIdade;
 	cout << "Digite o Sexo \'M' ou \'F': ";
-	cin >> jogador.s_colectSexo;
+	cin >> player1.s_colectSexo;
 	cout << "Digite o Estado UF: ";
-	cin >> jogador.s_colectEstado;
-
-
-	cout << endl << endl;
-	cout << "[Nome Completo]  |" << '\t';
-	cout << "[Login]  |" << '\t';
-	cout << "[Senha]  |" << '\t';
-	cout << "[Idade]  |" << '\t';
-	cout << "[Sexo]  |" << '\t';
-	cout << "[Estado]" << endl;
-
-	cout << jogador.s_colectName << " | " << '\t';
-	cout << jogador.s_colectLogin << " | " << '\t';
-	cout << jogador.s_colectSenha << " | " << '\t';
-	cout << jogador.s_colectIdade << " | " << '\t';
-	cout << jogador.s_colectSexo << " | " << '\t';
-	cout << jogador.s_colectEstado << endl;
+	cin >> player1.s_colectEstado;
 }

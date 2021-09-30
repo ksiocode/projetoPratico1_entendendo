@@ -74,7 +74,7 @@ void MostraDadosVetor()
 extern Player player1;; //Extern vai referenciar com a Declaração da Struct pelo Arquivo ColetaDados onde ela é Inicializada com Valor
 
 
-void MostraDados(Player jogador)
+void MostraDados(Player jogador) //Passa o tipo jogador mas não é usado é só para sobrecarga da função
 {
 	cout << endl << endl;
 	cout << "[Nome Completo]  |" << '\t';
@@ -84,10 +84,10 @@ void MostraDados(Player jogador)
 	cout << "[Sexo]  |" << '\t';
 	cout << "[Estado]" << endl;
 
-	cout << jogador.s_colectName << " | " << '\t';
-	cout << jogador.s_colectLogin << " | " << '\t';
-	cout << jogador.s_colectSenha << " | " << '\t';
-	cout << jogador.s_colectIdade << " | " << '\t';
-	cout << jogador.s_colectSexo << " | " << '\t';
-	cout << jogador.s_colectEstado << endl;
+	cout << player1.s_colectName << " | " << '\t';
+	cout << player1.s_colectLogin << " | " << '\t';
+	cout << player1.s_colectSenha << " | " << '\t';
+	cout << player1.s_colectIdade << " | " << '\t';
+	cout << player1.s_colectSexo << " | " << '\t';
+	cout << player1.s_colectEstado << endl;
 }

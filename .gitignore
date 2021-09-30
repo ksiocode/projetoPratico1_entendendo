@@ -3,3 +3,13 @@
 *.db-wal
 *.db-shm
 *.opendb
+.vs/ObjetosPraticaOPorque/v16/.suo
+*.ipch
+*.obj
+*.tlog
+*.recipe
+*.ilk
+*.log
+*.idb
+*.pdb
+*.exe

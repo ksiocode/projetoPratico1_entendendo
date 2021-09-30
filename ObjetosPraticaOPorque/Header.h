@@ -4,7 +4,7 @@
 #include "Player.h"
 #include "LimpaTela.h"
 
-void cls(HANDLE hConsole);
+///void cls(HANDLE hConsole);
 
 
 
@@ -13,7 +13,7 @@ void cls(HANDLE hConsole);
 using namespace std;
 
 void Menu();
-void ColetaDados(); // Prototipo da função para ser reconhecido pelo arquivo main
+void ColetaDados(); // Prototipo da funÃ§Ã£o para ser reconhecido pelo arquivo main
 void MostraDados();
 
 #define MAX_USERS_VEC 3

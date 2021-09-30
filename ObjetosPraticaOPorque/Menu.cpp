@@ -63,6 +63,10 @@ void Menu()
 	}
 		break;
 	case e_opc_structvetor5jogadores:
+	{
+		ColetaDadosVetorStruct();
+		MostraDadosVetorStruct();
+	}
 		break;
 	case e_opc_structvetor5jogadoresreferencia:
 		break;

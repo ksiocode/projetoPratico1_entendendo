@@ -27,3 +27,8 @@ void MostraDados(Player jogador);
 
 void ColetaDadosReferencia(Player &jogador);
 void MostraDadosReferencia(Player &jogador);
+
+
+const static int MAX_PLAYERS = 5;
+void ColetaDadosVetorStruct();
+void MostraDadosVetorStruct();

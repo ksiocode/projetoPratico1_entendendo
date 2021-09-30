@@ -62,13 +62,13 @@ void ColetaDadosVetor()
 		cin >> colectSexoVector[i];
 		cout << "Digite o Estado UF: ";
 		cin >> colectEstadoVector[i];
-
 		cout << endl;
 	}
 		cout << endl;
-
 }
 
+
+// A Struct de Player esta Declarada no Arquivo Player.h e esta incluido aqui
 
 Player player1;
 
@@ -107,4 +107,36 @@ void ColetaDadosReferencia(Player &jogador)  //Alterando os Valores por Referenc
 	cin >> jogador.s_colectSexo;
 	cout << "Digite o Estado UF: ";
 	cin >> jogador.s_colectEstado;
+}
+
+
+Player players[MAX_PLAYERS];
+
+void ColetaDadosVetorStruct()  //Passa o tipo jogador mas não é usado é só para sobrecarga da função
+{
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		cout << "Digite o Nome Completo do Usuario: ";
+		cin.ignore(); // Remove a Quebra de Linha do Buffer para o Getline
+		cin.getline(players[i].s_colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
+		if (players[i].s_colectName[0] == '0' || strcmp(players[i].s_colectName, "sair") == 0)
+		{
+			break; //Saida caso digite 0 no nome, ou "sair" no vetor
+		}
+		cout << "Digite o Login do Usuario: ";
+		cin >> players[i].s_colectLogin;
+		cout << "Digite um Senha para o Usuario: ";
+		cin >> players[i].s_colectSenha;
+		cout << "Digite a Idade: ";
+		cin >> players[i].s_colectIdade;
+		cout << "Digite o Sexo \'M' ou \'F': ";
+		cin >> players[i].s_colectSexo;
+		cout << "Digite o Estado UF: ";
+		cin >> players[i].s_colectEstado;
+		cout << endl;
+	}
+	cout << endl;
+
+
 }

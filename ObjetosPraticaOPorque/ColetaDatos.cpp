@@ -1,5 +1,5 @@
 #include "Header.h"
-
+#include "Player.h"
 
 
 char colectName[64];
@@ -31,10 +31,10 @@ void ColetaDados()
 
 //Inicio da Parte onde pegamos Pessimamente e Armazenamos os dados do Usuario em um Vetor de Tamanho Fixo
 //Se eu tiver mais de 3 Jogadores eu Teria que Recompilar o Programa para criar um Programa Limitado
-//Ou eu teria que chutar um numero absurdo para deixar o espaço na Memoria
+//Ou eu teria que chutar um numero absurdo para deixar o espaÃ§o na Memoria
 
 
-char colectNameVector[MAX_USERS_VEC][64]; //3 Usuarios com até 64 Digitos
+char colectNameVector[MAX_USERS_VEC][64]; //3 Usuarios com atÃ© 64 Digitos
 string colectLoginVector[MAX_USERS_VEC];
 string colectSenhaVector[MAX_USERS_VEC];
 int colectIdadeVector[MAX_USERS_VEC];
@@ -70,16 +70,6 @@ void ColetaDadosVetor()
 
 }
 
-
-
-struct Player {
-	char colectName[64];
-	string colectLogin;
-	string colectSenha;
-	int colectIdade;
-	char colectSexo;
-	string colectEstado;
-};
 
 Player player1;
 

@@ -1,6 +1,9 @@
 #pragma once
-#include <windows.h>
 
 
 
-HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
+
+//HANDLE hStdout = GetStdHandle(STD_OUTPUT_HANDLE);
+
+
+void clear_screen();

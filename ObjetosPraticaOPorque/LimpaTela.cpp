@@ -1,4 +1,5 @@
 #include "Header.h"
+#include <windows.h>
 
 void clear_screen()
 {

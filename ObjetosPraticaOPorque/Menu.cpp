@@ -16,7 +16,7 @@ void Menu()
 	cout << endl << "Digite o Numero da Opcao escolhida" << endl;
 	cout << "Opcao: ";
 	cin >> op;
-	cls(hStdout);
+	clear_screen();
 
 	
 
@@ -30,7 +30,7 @@ void Menu()
 		MostraDados();
 		break;
 	case '2':
-		ColetaDadosVetor();  //Coleta os Dados e Armazena em um Vetor Simples e Mostra Abaixo(Limitado para ter 3 registros de Usuarios, seria necessario Mudar na compilação)
+		ColetaDadosVetor();  //Coleta os Dados e Armazena em um Vetor Simples e Mostra Abaixo(Limitado para ter 3 registros de Usuarios, seria necessario Mudar na compilaÃ§Ã£o)
 		MostraDadosVetor();
 		break;
 	case '3':

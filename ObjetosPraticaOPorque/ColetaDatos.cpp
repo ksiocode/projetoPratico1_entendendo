@@ -87,4 +87,20 @@ void ColetaDados(Player jogador) //Agora com Sobrecarga do Tipo Struct Player, o
 	cin >> jogador.s_colectSexo;
 	cout << "Digite o Estado UF: ";
 	cin >> jogador.s_colectEstado;
+
+
+	cout << endl << endl;
+	cout << "[Nome Completo]  |" << '\t';
+	cout << "[Login]  |" << '\t';
+	cout << "[Senha]  |" << '\t';
+	cout << "[Idade]  |" << '\t';
+	cout << "[Sexo]  |" << '\t';
+	cout << "[Estado]" << endl;
+
+	cout << jogador.s_colectName << " | " << '\t';
+	cout << jogador.s_colectLogin << " | " << '\t';
+	cout << jogador.s_colectSenha << " | " << '\t';
+	cout << jogador.s_colectIdade << " | " << '\t';
+	cout << jogador.s_colectSexo << " | " << '\t';
+	cout << jogador.s_colectEstado << endl;
 }

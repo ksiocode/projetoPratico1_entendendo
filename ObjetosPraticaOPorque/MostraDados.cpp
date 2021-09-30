@@ -66,3 +66,28 @@ void MostraDadosVetor()
 	
 	cout << endl;
 }
+
+
+
+
+//Struct global por COPIA e Não Referencia para o Coletor para a função(Modo Horrivel)
+extern Player player1;; //Extern vai referenciar com a Declaração da Struct pelo Arquivo ColetaDados onde ela é Inicializada com Valor
+
+
+void MostraDados(Player jogador)
+{
+	cout << endl << endl;
+	cout << "[Nome Completo]  |" << '\t';
+	cout << "[Login]  |" << '\t';
+	cout << "[Senha]  |" << '\t';
+	cout << "[Idade]  |" << '\t';
+	cout << "[Sexo]  |" << '\t';
+	cout << "[Estado]" << endl;
+
+	cout << jogador.s_colectName << " | " << '\t';
+	cout << jogador.s_colectLogin << " | " << '\t';
+	cout << jogador.s_colectSenha << " | " << '\t';
+	cout << jogador.s_colectIdade << " | " << '\t';
+	cout << jogador.s_colectSexo << " | " << '\t';
+	cout << jogador.s_colectEstado << endl;
+}

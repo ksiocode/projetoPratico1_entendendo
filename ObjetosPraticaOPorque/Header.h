@@ -15,3 +15,4 @@ void MostraDadosVetor();
 
 
 void ColetaDados(Player jogador);
+void MostraDados(Player jogador);

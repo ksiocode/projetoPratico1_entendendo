@@ -1,6 +1,6 @@
 #include "Header.h"
 
-extern Player player1;
+
 void Menu()
 {
 	char op = '0';
@@ -33,7 +33,11 @@ void Menu()
 		MostraDadosVetor();
 		break;
 	case '3':
-		ColetaDados(player1); 	
+	{
+		extern Player player1;
+		ColetaDados(player1);
+		MostraDados(player1);
+	}
 		break;
 	case '4':
 		break;

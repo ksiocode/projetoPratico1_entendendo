@@ -1,6 +1,5 @@
 #pragma once
 
-
 struct Player {
 	char s_colectName[64];
 	string s_colectLogin;

@@ -35,13 +35,22 @@ int clear_screen()
         return ::GetLastError();
     }
 
+    written = 0;
+    PCWSTR sequence2 = L"\x1b[3J";
+    if (!WriteConsoleW(hStdOut, sequence, (DWORD)wcslen(sequence), &written, NULL))
+    {
+        // If we fail, try to restore the mode on the way out.
+        SetConsoleMode(hStdOut, originalMode);
+        return ::GetLastError();
+    }
+
     // To also clear the scroll back, emit L"\x1b[3J" as well.
     // 2J only clears the visible window and 3J only clears the scroll back.
 
     // Restore the mode on the way out to be nice to other command-line applications.
     SetConsoleMode(hStdOut, originalMode);
 
-    gotoxy(0, 0);
+    //gotoxy(0, 0);
     
     return 0;
     

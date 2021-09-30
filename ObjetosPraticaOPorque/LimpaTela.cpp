@@ -2,7 +2,7 @@
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 
-void clear_screen()
+int clear_screen()
 {
     HANDLE hStdOut;
 
@@ -41,8 +41,11 @@ void clear_screen()
     // Restore the mode on the way out to be nice to other command-line applications.
     SetConsoleMode(hStdOut, originalMode);
 
+    return 0;
     
 }
+
+
 /*
 void cls(HANDLE hConsole)
 {

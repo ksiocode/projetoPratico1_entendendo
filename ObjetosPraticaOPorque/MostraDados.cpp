@@ -1,5 +1,4 @@
 #include "Header.h"
-#include "Player.h"
 
 //Variaveis globais para o Coletor para a função(Modo Horrivel)
 extern char colectName[64]; //Extern vai referenciar com a Declaração da Variavel pelo Arquivo ColetaDados onde ela é Inicializada com Valor

@@ -1,10 +1,11 @@
 #pragma once
 
+
 struct Player {
-	char colectName[64];
-	string colectLogin;
-	string colectSenha;
-	int colectIdade;
-	char colectSexo;
-	string colectEstado;
+	char s_colectName[64];
+	string s_colectLogin;
+	string s_colectSenha;
+	int s_colectIdade;
+	char s_colectSexo;
+	string s_colectEstado;
 };

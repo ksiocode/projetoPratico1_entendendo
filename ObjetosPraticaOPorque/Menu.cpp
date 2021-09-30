@@ -38,6 +38,7 @@ void Menu()
 		extern Player player1;
 		ColetaDados(player1);
 		MostraDados(player1);
+		break;
 	}
 	case '33':
 	{

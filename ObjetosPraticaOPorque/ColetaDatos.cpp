@@ -194,3 +194,35 @@ void ColetaDados(PlayerObj *jogador)  //Passa o tipo jogador mas não é usado �
 	cout << "Digite o Estado UF: ";
 	cin >> jogador->s_colectEstado;
 }
+
+
+
+// A Class de Player esta Declarada no Arquivo Player.h e esta incluido aqui
+
+PlayerObj player2Obj[MAX_PLAYERS]; //Percebe que funciona igualmente a struct pois a class(Objeto) age igual a Struct com a diferença que a class por padrão vem Private no Modificador de Acesso, ai eu setei public:
+
+void ColetaDadosVetorClass(PlayerObj *jogador)  //Passa o tipo jogador mas não é usado é só para sobrecarga da função
+{
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		cout << "Digite o Nome Completo do Usuario: ";
+		cin.ignore(); // Remove a Quebra de Linha do Buffer para o Getline
+		cin.getline(jogador[i].s_colectName, 64); //Pega o conteudo da linha inteira com Espacos e guarda em colectName
+		if (jogador[i].s_colectName[0] == '0' || strcmp(player2Obj[i].s_colectName, "sair") == 0)
+		{
+			break; //Saida caso digite 0 no nome, ou "sair" no vetor
+		}
+		cout << "Digite o Login do Usuario: ";
+		cin >> jogador[i].s_colectLogin;
+		cout << "Digite um Senha para o Usuario: ";
+		cin >> jogador[i].s_colectSenha;
+		cout << "Digite a Idade: ";
+		cin >> jogador[i].s_colectIdade;
+		cout << "Digite o Sexo \'M' ou \'F': ";
+		cin >> jogador[i].s_colectSexo;
+		cout << "Digite o Estado UF: ";
+		cin >> jogador[i].s_colectEstado;
+		cout << endl;
+	}
+	cout << endl;
+}

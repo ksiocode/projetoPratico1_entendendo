@@ -200,3 +200,35 @@ void MostraDados(PlayerObj *jogador) //Passa o tipo jogador mas não é usado é
 	cout << jogador->s_colectSexo << " | " << '\t';
 	cout << jogador->s_colectEstado << endl;
 }
+
+
+
+void MostraDadosVetorClass(PlayerObj * players_ref) //Passa o tipo players por referencia para não haver Copia (Duplicada de Dados na Memoria)
+{
+	cout << endl << endl;
+	cout << "[Nome Completo]  |" << '\t';
+	cout << "[Login]  |" << '\t';
+	cout << "[Senha]  |" << '\t';
+	cout << "[Idade]  |" << '\t';
+	cout << "[Sexo]  |" << '\t';
+	cout << "[Estado]" << endl;
+
+	int indice = 0;
+	while (indice < MAX_PLAYERS) //Usei o While porque para quem só usa for é igual só Saber usar o martelo, todo problema pra ele vai achar que é prego
+	{
+		if (strcmp(players_ref[indice].s_colectName, "0") == 0) //para de Imprimir quando encontra o Digito 0
+		{
+			cout << endl;
+			break;
+		}
+		cout << players_ref[indice].s_colectName << " | " << '\t';
+		cout << players_ref[indice].s_colectLogin << " | " << '\t';
+		cout << players_ref[indice].s_colectSenha << " | " << '\t';
+		cout << players_ref[indice].s_colectIdade << " | " << '\t';
+		cout << players_ref[indice].s_colectSexo << " | " << '\t';
+		cout << players_ref[indice].s_colectEstado << endl;
+		indice++;
+	}
+
+	cout << endl;
+}

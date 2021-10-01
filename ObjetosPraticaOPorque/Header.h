@@ -40,3 +40,7 @@ void MostraDadosVetorStruct(Player *players_ref);
 
 void ColetaDados(PlayerObj *jogador);
 void MostraDados(PlayerObj *jogador);
+
+
+void ColetaDadosVetorClass(PlayerObj *jogador);
+void MostraDadosVetorClass(PlayerObj *players_ref);

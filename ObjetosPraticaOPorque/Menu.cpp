@@ -25,8 +25,7 @@ void Menu()
 	cout << e_opc_structvetor5jogadores << " - Ler 5 jogadores em um Vetor de Struct e Mostrar" << endl;
 	cout << e_opc_structvetor5jogadoresreferencia <<" - Ler 5 jogadores em um Vetor de Struct Referencia e Mostrar" << endl;
 	cout << e_opc_class1jogador << " - Ler 1 jogador em um Objeto(class) com Variaveis e Mostrar" << endl;
-	cout << e_opc_classvetor5jogadores << " - Ler 5 jogadores em um Vetor de Objeto(class) e Mostrar" << endl;
-	cout << e_opc_classvetor5jogadoresreferencia << " - Ler 5 jogadores em um Vetor de Objeto(class) Referencia e Mostrar" << endl;
+	cout << e_opc_classvetor5jogadores << " - Ler 5 jogadores em um Vetor de Objeto(class) por Referencia e Mostrar" << endl;
 	cout << e_opc_exit << " - Fechar o Programa" << endl;
 	cout << endl << "Digite o Numero da Opcao escolhida" << endl;
 	cout << "Opcao: ";
@@ -84,8 +83,11 @@ void Menu()
 	}
 		break;
 	case e_opc_classvetor5jogadores:
-		break;
-	case e_opc_classvetor5jogadoresreferencia:
+	{
+		extern PlayerObj player2Obj[MAX_PLAYERS];
+		ColetaDadosVetorClass(player2Obj);
+		MostraDadosVetorClass(player2Obj);
+	}
 		break;
 	default:
 		break;

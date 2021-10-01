@@ -1,7 +1,7 @@
 #include "Header.h" //<iostream> e using namespace std; esta aqui
 
 //Pratica aprendendo do porque utilizar objeto, o porque ele é importante e o que ele me ajuda
-//29-09-2021 by KsioCode or Sanskee3, mentorado por camilosasuke ca2software https://github.com/ca2
+//29-09-2021 by KsioCode or Sanskee3, mentorado por CamiloSasuke ca2software https://github.com/ca2
 //https://ca2.software/
 //Este é um exercicio pratico para melhorar o compreendimento de como variaveis, structs, objetos e futuramente
 //as alocações Dinamicas de memória do objetos durante o instanciamento dos mesmos.

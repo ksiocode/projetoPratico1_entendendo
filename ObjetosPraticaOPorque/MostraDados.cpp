@@ -232,3 +232,25 @@ void MostraDadosVetorClass(PlayerObj * players_ref) //Passa o tipo players por r
 
 	cout << endl;
 }
+
+
+
+void Basico()
+{
+
+	struct Pessoa 
+	{
+		string nome;
+		int idade;
+		char sexo;
+	};
+
+	Pessoa p1 = {"Pessoa1", 20, 'M'}; //Setei uma pessoa direto
+	Pessoa* pes = &p1; //Referenciei o endereço pessoa em pes com tipo Pessoa
+
+
+		cout << pes->nome << endl;  //Apos colocar dentro de um Ponteiro eu posso acessar pelo operador seta ->
+		cout << pes->idade << endl;
+		cout << pes->sexo << endl;
+	
+}

@@ -11,7 +11,8 @@ enum e_opc
 	e_opc_structvetor5jogadoresreferencia,
 	e_opc_class1jogador,
 	e_opc_classvetor5jogadores,
-	e_opc_classvetor5jogadoresreferencia
+	e_opc_classvetor5jogadoresreferencia,
+	e_opc_basicoReferenciaStrucPonteiro
 };
 
 void Menu()
@@ -26,6 +27,7 @@ void Menu()
 	cout << e_opc_structvetor5jogadoresreferencia <<" - Ler 5 jogadores em um Vetor de Struct Referencia e Mostrar" << endl;
 	cout << e_opc_class1jogador << " - Ler 1 jogador em um Objeto(class) com Variaveis e Mostrar" << endl;
 	cout << e_opc_classvetor5jogadores << " - Ler 5 jogadores em um Vetor de Objeto(class) por Referencia e Mostrar" << endl;
+	cout << e_opc_basicoReferenciaStrucPonteiro << " - Basico Chama uma pessoa Ja setada por Referencia e Struct sem funcao" << endl;
 	cout << e_opc_exit << " - Fechar o Programa" << endl;
 	cout << endl << "Digite o Numero da Opcao escolhida" << endl;
 	cout << "Opcao: ";
@@ -89,6 +91,9 @@ void Menu()
 		MostraDadosVetorClass(player2Obj);
 	}
 		break;
+	case e_opc_basicoReferenciaStrucPonteiro:
+		Basico();
+	break;
 	default:
 		break;
 	}

@@ -46,3 +46,4 @@ void ColetaDadosVetorClass(PlayerObj *jogador);
 void MostraDadosVetorClass(PlayerObj *players_ref);
 
 void Basico();
+void BasicoVectorReferenc();

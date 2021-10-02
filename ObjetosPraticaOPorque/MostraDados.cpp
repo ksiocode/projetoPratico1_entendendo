@@ -254,3 +254,83 @@ void Basico()
 		cout << pes->sexo << endl;
 	
 }
+
+
+
+
+void BasicoVectorReferenc()
+{
+
+	class Pessoax
+	{
+	public:
+		string nome;
+		int idade;
+		char sexo;
+	};
+
+	Pessoax VecPex[10];
+
+	VecPex[0] = { "Pessoa1", 10, 'M' };
+	VecPex[1] = { "Pessoa2", 20, 'F' };
+	VecPex[2] = { "Pessoa3", 30, 'M' };
+	VecPex[3] = { "Pessoa4", 40, 'F' };
+	VecPex[4] = { "Pessoa5", 50, 'M' };
+	VecPex[5] = { "Pessoa6", 60, 'F' };
+	VecPex[6] = { "Pessoa7", 70, 'M' };
+	VecPex[7] = { "Pessoa8", 80, 'F' };
+	VecPex[8] = { "Pessoa9", 90, 'M' };
+	VecPex[9] = { "Pessoa10", 100, 'F' };
+
+
+
+	struct Pessoas
+	{
+		string nome;
+		int idade;
+		char sexo;
+	};
+
+	Pessoas p1;
+	Pessoas* pes = &p1; //Referenciei o endereço pessoa em pes com tipo Pessoa
+
+	Pessoas p2Vec[10];
+	Pessoas* pvec = p2Vec; //Não precisa colocar [10] no p2Vec porque um Vetor contem um endereço dele onde começa na variavel
+
+	for (int i = 0; i < 10; i++)
+	{
+		pes->nome = VecPex[i].nome;
+		pes->idade = VecPex[i].idade;
+		pes->sexo = VecPex[i].sexo;	
+
+		pvec[i].nome = VecPex[i].nome;
+		pvec[i].idade = VecPex[i].idade;
+		pvec[i].sexo = VecPex[i].sexo;
+
+		//Esses dados só Existe dentro do Escopo do for, pois Pessoas pes não é Vetor e não é alocado dinamicamente na Memoria
+		cout << "Atribuicao Durante a Iteracao: " << pes->nome << endl;  //Apos colocar dentro de um Ponteiro eu posso acessar pelo operador seta ->
+		cout << "Atribuicao Durante a Iteracao: " << pes->idade << endl;
+		cout << "Atribuicao Durante a Iteracao: " << pes->sexo << endl;
+	}
+
+
+	cout << endl;
+	cout << "Esse eh o Resultado só salvou o Ultimo e Objeto não tem um vetor nele, só a Struct";
+
+	for (int i = 0; i < 10; i++)
+	{
+
+		cout << pes->nome << endl;  //Apos colocar dentro de um Ponteiro eu posso acessar pelo operador seta ->
+		cout << pes->idade << endl;
+		cout << pes->sexo << endl;
+		
+	}
+
+	cout << "--------------" << endl;
+	for (int i = 0; i < 10; i++)
+	{
+		cout << pvec[i].nome << endl;  //Apos colocar dentro de um Ponteiro eu posso acessar pelo operador seta ->
+		cout << pvec[i].idade << endl;
+		cout << pvec[i].sexo << endl;
+	}
+}
